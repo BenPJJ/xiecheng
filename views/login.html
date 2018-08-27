@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>携程旅行-酒店预订,机票预订查询,旅游度假,商旅管理-携程无线官网</title>
+    <link rel="shorcut icon" href="../bitbug_favicon.ico">
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+</head>
+<body>
+    <section class="fullScreen">
+        <div class="login-hd">
+            <a href="/">
+                <i class="icon-home"></i>
+            </a>
+            <div class="home-box">
+                <h2>欢迎来到携程旅行</h2>
+                <div class="btnLogin" id="btnLogin-f">
+                    <span>登录/注册</span>
+                </div>
+                <div class="login-line">
+                    <span>更多</span>
+                </div>
+                <ul class="column-2">
+                    <li class="btnPhoneNumber">
+                        <i class="icon-phoneNumber"></i>
+                        手机号查单
+                    </li>
+                    <li class="btnMessage">
+                        <i class="icon-mes"></i>
+                        消息
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="login-ft">    
+                <span>
+                    <i class="icon-setting"></i>
+                    设置
+                </span>
+                <span>
+                    <i class="icon-about"></i>
+                    关于
+                </span>
+            </div>
+        </footer>
+    </section>
+
+    <section class="halfScreen"> 
+        <header>
+            <div class="home-hd">
+                <h1>登录携程，开启旅程</h1>
+                <i class="icon-back" id="icon-back"></i>
+                <i class="icon-msg"></i>
+            </div>
+            <div class="login-box">
+                <button class="btnLogin" id="btnLogin-h">登录/注册</button>
+                <button class="btnPhoneNumber">手机号查单</button>
+            </div>
+        </header>
+        <div class="home-article">
+            <ul class="home-list home-list-card">
+                <li>
+                    <i class="icon-card"></i>
+                    钱包
+                    <em>
+                        礼品卡 
+                        <i class="separator">|</i>
+                        现金
+                        <i class="separator">|</i>
+                        返现
+                    </em>
+                </li>
+                <li>
+                    <i class="icon-coupon"></i>
+                    优惠券
+                    <em>领券</em>
+                </li>
+                <li>
+                    <i class="icon-point"></i>
+                    积分
+                    <em>兑好礼</em>
+                </li>
+                <li>
+                    <i class="icon-spend"></i>
+                    拿去花
+                    <em>分期付款</em>
+                </li>
+            </ul>
+
+            <ul class="home-list home-list-tool">
+                <li>
+                    <em>旅客/地址/发票抬头</em>
+                    常用信息
+                </li>
+                <li>
+                    <em>降价产品有提醒</em>
+                    我的收藏
+                </li>
+                <li>
+                    <em>近15天访问记录</em>
+                    浏览历史
+                </li>
+                <li>
+                    <em>供应商加盟/代理合作</em>
+                    我要合作
+                </li>
+            </ul>
+
+            <ul class="home-list home-list-tool">
+                <li>
+                    <em>航班动态/翻译助手等</em>
+                    出行工具
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+<script>
+    var btnLogin_f = document.getElementById('btnLogin-f')
+    var btnLogin_h = document.getElementById('btnLogin-h')
+    var iconBack = document.getElementById('icon-back')
+    btnLogin_f.onclick = function() {
+        window.location.href = '/register/'
+    
+    }
+    btnLogin_h.onclick = function() {
+        window.location.href = '/register/'
+    }
+
+    iconBack.onclick = function() {
+        window.location.href = '/'
+    }
+</script>
+</html>

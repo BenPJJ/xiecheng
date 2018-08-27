@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>携程旅行-酒店预订,机票预订查询,旅游度假,商旅管理-携程无线官网</title>
+    <link rel="shorcut icon" href="../bitbug_favicon.ico">
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/register.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <div class="home-hd">
+                <i id="font-back"></i>
+                <span id="register">注册</span>
+            </div>
+
+            <div class="page-box">
+               <form id="login-form">
+                    <h2>携程账号登录</h2>
+                    <ul class="login-box">
+                        <li>
+                            <div class="input-box">
+                                <input type="email" name="email" placeholder="邮箱" autofocus>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-box input-box-pass">
+                                <input type="password" name="password" placeholder="登录密码">
+                                <span>找回密码</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn-box">
+                        <button type="submit" id="btnLogin">登录</button>
+                        <p>
+                            <a href="###" class="forget">手机动态密码登录</a>
+                            <a href="###" class="intel-phone">境外手机登录</a>
+                        </p>
+                    </div>
+               </form>
+            </div>            
+        </header>
+
+        <footer>
+            <ul class="login-ft">
+                <li>
+                    <i class="icon-qq">QQ登录</i>
+                </li>
+                <li>
+                    <i class="icon-baidu">百度登录</i>
+                </li>
+                <li>
+                    <i class="icon-weibo">微博登录</i>
+                </li>
+            </ul>
+            <p class="agreement">
+                登录即代表您同意我们的 
+                <a href="#">服务协议</a>
+                和 
+                <a href="#">隐私政策</a>
+            </p>
+        </footer>
+    </section>
+</body>
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $('#font-back').on('click', function () {
+        window.location.href = '/login/'
+    })
+
+    $('#register').on('click', function () {
+        window.location.href = '/enroll/'
+    })
+
+    $('#login-form').on('submit', function (e) {
+        e.preventDefault()
+        /* serialize() 创建标准 URL 编码文本字符串 */
+        var formData = $(this).serialize()
+        // console.log(formData)
+        $.ajax({
+            url: '/register',
+            type: 'post',
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                let err_code = data.err_code
+                if (err_code === 0) {
+                    window.location.href = '/'
+                } else if (err_code === 1) {
+                    window.alert(data.message)
+                } else if (err_code === 500) {
+                    window.alert('Internal err')
+                }
+            }
+        })
+    })
+</script>
+</html>

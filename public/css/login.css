@@ -1,0 +1,713 @@
+html,
+body {
+    font: 400 14px/1.5 Arial, "Lucida Grande", Verdana, "Microsoft YaHei", hei;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    /* 在 MacOS 上才有效果 */
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+
+section {
+    position: relative;
+    /* background-color: pink; */
+}
+
+@media (max-width: 320px) {
+    .fullScreen {
+        display: none;
+    }
+    .halfScreen {
+        min-width: 320px;
+    }
+    .halfScreen header {
+        width: 100%;
+        background: url(../img/img-login/photo_myctrip@2x_6.22.jpg) 0 0 no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+    }
+    .halfScreen .home-hd h1 {
+        padding-top: 64px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: normal;
+        font-family: Microsoft Yahei;
+        color: #fff;
+    }
+    .halfScreen .home-hd i {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        top: 0;
+    }
+    .halfScreen .home-hd i.icon-back {
+        left: 0;
+    }
+    .halfScreen .home-hd i.icon-msg {
+        right: 0;
+    }
+    .halfScreen .home-hd i::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+        background: url(../img/img-login/un_home_mobile_7.4@2x.png) no-repeat;
+        background-size: 43px auto;
+        content: "";
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .halfScreen .home-hd .icon-msg::after {
+        width: 19px;
+        height: 18px;
+        background-position: -25px -87px;
+    }
+    .halfScreen .home-hd .icon-back::after {
+        width: 9px;
+        height: 16px;
+        background-position: 0 -23px;
+    }
+    .login-box {
+        /* padding-top: 5px; */
+        height: 56px;
+        line-height: 56px;
+        text-align: center;
+    }
+    .login-box button {
+        width: 120px;
+        height: 36px;
+        line-height: 36px;
+        outline: none;
+        border: 0;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 15px;
+        color: #fff;
+    }
+    .login-box button.btnLogin {
+        background-color: #ff9a14;
+    }
+    .login-box button.btnPhoneNumber {
+        margin-left: 30px;
+        background: rgba(255, 255, 255, .15);
+        border: 1px solid rgba(255, 255, 255, .5);
+    }
+    .home-list {
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+    .home-list-card,
+    .home-list-tool {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .home-list-card li {
+        -webkit-box-flex: 0 0 33.3%;
+        -ms-flex: 0 0 33.3%;
+        flex: 0 0 33.3%;
+        position: relative;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #222;
+        border-left: 1px solid #dbdbdb;
+        /* background-color: pink; */
+    }
+    .home-list-card li:first-child {
+        -webkit-box-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-left: 16px;
+        text-align: left;
+        padding: 11px 10px 10px 30px;
+        border: 0;
+    }
+    .home-list-card li>i {
+        display: inline-block;
+        width: 19px;
+        height: 20px;
+        line-height: 20px;
+        padding-right: 15px;
+        vertical-align: middle;
+        overflow: hidden;
+        background: url(../img/img-login/un_home_mobile_7.4@2x.png) no-repeat;
+        background-size: 43px auto;
+    }
+    .home-list-card li i.icon-card {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        background-position: 0 -38px;
+    }
+    .home-list-card li i.icon-coupon {
+        background-position: 0px -60px;
+    }
+    .home-list-card li i.icon-point {
+        position: relative;
+        top: -2px;
+        background-position: 0px -106px;
+    }
+    .home-list-card li i.icon-spend {
+        background-position: -21px -146px;
+    }
+    .home-list-card li em {
+        display: block;
+        margin-top: 10px;
+        font-size: 13px;
+        color: #999;
+    }
+    .home-list-card li em i {
+        margin-right: 12px;
+    }
+    .home-list-tool li {
+        position: relative;
+        -webkit-box-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        height: 49px;
+        line-height: 49px;
+        margin-left: 16px;
+        padding-right: 50px;
+        font-size: 16px;
+    }
+    .home-list-tool li:nth-child(2) {
+        border-bottom: 1px solid #efefef;
+    }
+    .home-list-tool li::after {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        /* background-color: pink; */
+        border-top: 1px solid #999;
+        border-right: 1px solid #999;
+        content: "";
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .home-list-tool li em {
+        float: right;
+        font-size: 13px;
+        color: #999;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .fullScreen {
+        display: none;
+    }
+    .halfScreen header {
+        width: 100%;
+        background: url(../img/img-login/photo_myctrip@2x_6.22.jpg) 0 0 no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+    }
+    .halfScreen .home-hd h1 {
+        padding-top: 64px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: normal;
+        font-family: Microsoft Yahei;
+        color: #fff;
+    }
+    .halfScreen .home-hd i {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        top: 0;
+    }
+    .halfScreen .home-hd i.icon-back {
+        left: 0;
+    }
+    .halfScreen .home-hd i.icon-msg {
+        right: 0;
+    }
+    .halfScreen .home-hd i::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+        background: url(../img/img-login/un_home_mobile_7.4@2x.png) no-repeat;
+        background-size: 43px auto;
+        content: "";
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .halfScreen .home-hd .icon-msg::after {
+        width: 19px;
+        height: 18px;
+        background-position: -25px -87px;
+    }
+    .halfScreen .home-hd .icon-back::after {
+        width: 9px;
+        height: 16px;
+        background-position: 0 -23px;
+    }
+    .login-box {
+        /* padding-top: 5px; */
+        height: 56px;
+        line-height: 56px;
+        text-align: center;
+    }
+    .login-box button {
+        width: 120px;
+        height: 36px;
+        line-height: 36px;
+        outline: none;
+        border: 0;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 15px;
+        color: #fff;
+    }
+    .login-box button.btnLogin {
+        background-color: #ff9a14;
+    }
+    .login-box button.btnPhoneNumber {
+        margin-left: 30px;
+        background: rgba(255, 255, 255, .15);
+        border: 1px solid rgba(255, 255, 255, .5);
+    }
+    .home-list {
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+    .home-list-card,
+    .home-list-tool {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .home-list-card li {
+        -webkit-box-flex: 0 0 33.3%;
+        -ms-flex: 0 0 33.3%;
+        flex: 0 0 33.3%;
+        position: relative;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #222;
+        border-left: 1px solid #dbdbdb;
+        /* background-color: pink; */
+    }
+    .home-list-card li:first-child {
+        -webkit-box-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-left: 16px;
+        text-align: left;
+        padding: 11px 10px 10px 30px;
+        border: 0;
+    }
+    .home-list-card li>i {
+        display: inline-block;
+        width: 19px;
+        height: 20px;
+        line-height: 20px;
+        padding-right: 15px;
+        vertical-align: middle;
+        overflow: hidden;
+        background: url(../img/img-login/un_home_mobile_7.4@2x.png) no-repeat;
+        background-size: 43px auto;
+    }
+    .home-list-card li i.icon-card {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        background-position: 0 -38px;
+    }
+    .home-list-card li i.icon-coupon {
+        background-position: 0px -60px;
+    }
+    .home-list-card li i.icon-point {
+        position: relative;
+        top: -2px;
+        background-position: 0px -106px;
+    }
+    .home-list-card li i.icon-spend {
+        background-position: -21px -146px;
+    }
+    .home-list-card li em {
+        display: block;
+        margin-top: 10px;
+        font-size: 13px;
+        color: #999;
+    }
+    .home-list-card li em i {
+        margin-right: 12px;
+    }
+    .home-list-tool li {
+        position: relative;
+        -webkit-box-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        height: 49px;
+        line-height: 49px;
+        margin-left: 16px;
+        padding-right: 50px;
+        font-size: 16px;
+    }
+    .home-list-tool li:nth-child(2) {
+        border-bottom: 1px solid #efefef;
+    }
+    .home-list-tool li::after {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        /* background-color: pink; */
+        border-top: 1px solid #999;
+        border-right: 1px solid #999;
+        content: "";
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .home-list-tool li em {
+        float: right;
+        font-size: 13px;
+        color: #999;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    html,
+    body {
+        background-color: #f5f5f5;
+    }
+    .halfScreen {
+        display: none;
+    }
+    .login-hd {
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .icon-home {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        /* background-color: pink; */
+        border-left: 1px solid #dbdbdb;
+        border-right: 1px solid #dbdbdb;
+        border-radius: 0 0 3px 3px;
+        box-shadow: 0px 2px 0px #dbdbdb;
+    }
+    .icon-home::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background: url(../img/img-login/un_login_pad@2x.png) no-repeat 0 0;
+        background-size: 25px auto;
+        content: "";
+        transform: translate(-50%, -50%);
+    }
+    .home-box {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 100%;
+        height: 308px;
+        background-color: #efefef;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px 60px 0;
+    }
+    .home-box h2 {
+        font-size: 32px;
+        color: #7e9fad;
+        font-weight: normal;
+    }
+    .home-box .btnLogin {
+        height: 52px;
+        margin: 37px 0;
+        line-height: 52px;
+        text-align: center;
+        background-color: #ff9a14;
+        border-left: 1px solid #ff9a14;
+        border-right: 1px solid #ff9a14;
+        -webkit-box-shadow: 0 2px 0 #e47c15;
+        box-shadow: 0 2px 0 #e47c15;
+    }
+    .home-box .btnLogin span {
+        color: #fff;
+        font-size: 18px;
+        -webkit-text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    }
+    .login-line {
+        position: relative;
+        height: 0;
+        border-top: 1px solid #dbdbdb;
+    }
+    .login-line span {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        padding: 0 20px;
+        font-size: 14px;
+        color: #999;
+        background-color: #efefef;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .column-2 {
+        width: 100%;
+        height: 104px;
+        line-height: 104px;
+        text-align: center;
+        /* border: 1px solid red; */
+        /* background-color: purple; */
+        padding: 30px 0px;
+    }
+    .column-2 li {
+        float: left;
+        width: 49%;
+        height: 44px;
+        line-height: 44px;
+        font-size: 15px;
+        color: #333;
+        border-radius: 3px;
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .column-2 .btnPhoneNumber {
+        margin-right: 2%;
+    }
+    .column-2 li i,
+    .login-ft span i {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: url(../img/img-login/un_login_pad@2x.png) no-repeat;
+        background-size: 25px auto;
+        vertical-align: middle;
+    }
+    .column-2 .btnPhoneNumber i {
+        background-position: -4px -26px;
+    }
+    .column-2 .btnMessage i {
+        background-position: -4px -52px;
+    }
+    footer {
+        display: block;
+    }
+    .login-ft {
+        position: absolute;
+        top: 650px;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        overflow: hidden;
+        /* background-color: pink; */
+    }
+    .login-ft span {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 20px;
+        color: #222;
+        font-size: 15px;
+    }
+    .login-ft span:first-child {
+        border-right: 1px solid #dbdbdb;
+    }
+    .login-ft span .icon-setting {
+        background-position: -3px -77px;
+    }
+    .login-ft span .icon-about {
+        background-position: -3px -102px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html,
+    body {
+        background-color: #f5f5f5;
+    }
+    .halfScreen {
+        display: none;
+    }
+    .login-hd {
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .icon-home {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        /* background-color: pink; */
+        border-left: 1px solid #dbdbdb;
+        border-right: 1px solid #dbdbdb;
+        border-radius: 0 0 3px 3px;
+        box-shadow: 0px 2px 0px #dbdbdb;
+    }
+    .icon-home::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background: url(../img/img-login/un_login_pad@2x.png) no-repeat 0 0;
+        background-size: 25px auto;
+        content: "";
+        transform: translate(-50%, -50%);
+    }
+    .home-box {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        height: 308px;
+        background-color: #efefef;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px 60px 0;
+    }
+    .home-box h2 {
+        font-size: 32px;
+        color: #7e9fad;
+        font-weight: normal;
+    }
+    .home-box .btnLogin {
+        height: 52px;
+        margin: 37px 0;
+        line-height: 52px;
+        text-align: center;
+        background-color: #ff9a14;
+        border-left: 1px solid #ff9a14;
+        border-right: 1px solid #ff9a14;
+        -webkit-box-shadow: 0 2px 0 #e47c15;
+        box-shadow: 0 2px 0 #e47c15;
+    }
+    .home-box .btnLogin span {
+        color: #fff;
+        font-size: 18px;
+        -webkit-text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    }
+    .login-line {
+        position: relative;
+        height: 0;
+        border-top: 1px solid #dbdbdb;
+    }
+    .login-line span {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        padding: 0 20px;
+        font-size: 14px;
+        color: #999;
+        background-color: #efefef;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .column-2 {
+        width: 100%;
+        height: 104px;
+        line-height: 104px;
+        text-align: center;
+        /* border: 1px solid red; */
+        /* background-color: purple; */
+        padding: 30px 0px;
+    }
+    .column-2 li {
+        float: left;
+        width: 49%;
+        height: 44px;
+        line-height: 44px;
+        font-size: 15px;
+        color: #333;
+        border-radius: 3px;
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .column-2 .btnPhoneNumber {
+        margin-right: 2%;
+    }
+    .column-2 li i,
+    .login-ft span i {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: url(../img/img-login/un_login_pad@2x.png) no-repeat;
+        background-size: 25px auto;
+        vertical-align: middle;
+    }
+    .column-2 .btnPhoneNumber i {
+        background-position: -4px -26px;
+    }
+    .column-2 .btnMessage i {
+        background-position: -4px -52px;
+    }
+    footer {
+        display: block;
+    }
+    .login-ft {
+        position: absolute;
+        top: 650px;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        overflow: hidden;
+        /* background-color: pink; */
+    }
+    .login-ft span {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 20px;
+        color: #222;
+        font-size: 15px;
+    }
+    .login-ft span:first-child {
+        border-right: 1px solid #dbdbdb;
+    }
+    .login-ft span .icon-setting {
+        background-position: -3px -77px;
+    }
+    .login-ft span .icon-about {
+        background-position: -3px -102px;
+    }
+}

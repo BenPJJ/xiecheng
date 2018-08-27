@@ -1,0 +1,868 @@
+html,
+body {
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    background-color: #f2f2f2;
+}
+
+a,
+i {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+i,
+b,
+dfn {
+    font-style: normal;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.col-33 {
+    -webkit-box-flex: 0 0 33%;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+}
+
+/* search 搜索 */
+
+.search div span::after,
+.search a::before {
+    background: url(../img/img-index/un_ico_home_v620.png) no-repeat;
+    background-size: 104px auto;
+    position: absolute;
+    overflow: hidden;
+    content: "";
+}
+
+.search {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 45px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f6f6f6;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 10px 45px 10px 5px;
+    z-index: 12;
+}
+
+.search div {
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 0 5px;
+    position: relative;
+    vertical-align: middle;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+}
+
+.search div span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    color: #666666;
+    padding-left: 15px;
+}
+
+.search div span::after {
+    top: 50%;
+    left: 6px;
+    width: 14px;
+    height: 13px;
+    background-position: -59px -280px;
+    /* border: 1px solid red; */
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.search a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    /* background-color: pink; */
+    /* border: 1px solid red; */
+}
+
+.search a::before {
+    top: 0;
+    right: 8px;
+    width: 27px;
+    height: 27px;
+    background-position: -59px -190px;
+}
+
+.search a span {
+    position: absolute;
+    bottom: 1px;
+    right: 8px;
+    font-size: 12px;
+    color: #2eaae0;
+}
+
+/* banner 横幅 */
+
+.banner {
+    width: 100%;
+    min-height: 64px;
+    padding-top: 45px;
+    overflow: hidden;
+    /* background-color: pink; */
+    position: relative;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+}
+
+.circle {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.circle i {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border: 1px solid rgba(5, 18, 28, .05);
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, .08);
+    overflow: hidden;
+}
+
+.circle .current {
+    width: 15px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* nav 导航 */
+
+nav {
+    height: 65px;
+    margin: 0 5px;
+    padding: 5px 0px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+nav ul li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+nav ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: column;
+    -ms-flex-pack: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+nav ul li i {
+    width: 34px;
+    height: 34px;
+    background: url(../img/img-index/un_ico_localnav_v7.12@2x.png) no-repeat;
+    background-size: 100% auto;
+}
+
+nav ul li:first-child i {
+    background-position: 0 0;
+}
+
+nav ul li:nth-child(2) i {
+    background-position: 0 -34px;
+}
+
+nav ul li:nth-child(3) i {
+    background-position: 0 -68px;
+}
+
+nav ul li:nth-child(4) i {
+    background-position: 0 -102px;
+}
+
+nav ul li:nth-child(5) i {
+    background-position: 0 -136px;
+}
+
+nav ul li span {
+    font-size: 12px;
+    color: #222222;
+}
+
+/* 业务 */
+
+section {
+    padding: 3px 5px;
+    /* background-color: pink; */
+}
+
+section .row {
+    height: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+section .row:first-child {
+    background-color: #fa6c53;
+    border-radius: 5px 5px 0 0;
+}
+
+section .row:nth-child(2) {
+    background-color: #4c99ed;
+}
+
+section .row:nth-child(3) {
+    background-color: #43c794;
+    border-radius: 0 0 5px 5px;
+    margin: 0;
+}
+
+section .row div {
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-right: 1px solid #f2f2f2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section .row div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+}
+
+section .row .row-l {
+    height: 100%;
+    background: url(../img/img-index/grid-nav-items-hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+section .row:nth-child(2) .row-l {
+    height: 100%;
+    background: url(../img/img-index/grid-nav-items-flight.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+section .row:nth-child(3) .row-l {
+    height: 100%;
+    background: url(../img/img-index/grid-nav-items-travel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+section .row33 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+section .row33 a:first-child {
+    border-bottom: 1px solid #fff;
+}
+
+/* local-nav 局部导航 */
+
+.local-nav {
+    height: 120px;
+    border-radius: 5px;
+    margin: 0 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+}
+
+.local-nav-l {
+    height: 60px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.local-nav ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.local-nav ul li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.local-nav li a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.local-nav li i {
+    display: block;
+    width: 25px;
+    height: 22px;
+    overflow: hidden;
+    background: url(../img/img-index/un_ico_subnav_v7.124@2x.png) no-repeat;
+    background-size: 100% auto;
+    content: "";
+    line-height: 22px;
+    text-align: center;
+}
+
+.local-nav li:nth-child(1) i {
+    position: relative;
+    top: 2px;
+}
+
+.local-nav li:nth-child(2) i {
+    background-position: 2px -25px;
+}
+
+.local-nav li:nth-child(3) i {
+    background-position: 1px -55px;
+}
+
+.local-nav li:nth-child(4) i {
+    width: 24px;
+    background-position: 0 -85px;
+}
+
+.local-nav li:nth-child(5) i {
+    background-position: 0 -117px;
+}
+
+.local-nav-50 li:nth-child(1) i {
+    background-position: 4px -146px;
+}
+
+.local-nav-50 li:nth-child(2) i {
+    background-position: 0 -176px;
+}
+
+.local-nav-50 li:nth-child(3) i {
+    background-position: 0 -205px;
+}
+
+.local-nav-50 li:nth-child(4) i {
+    background-position: 0 -222px;
+}
+
+.local-nav-50 li:nth-child(5) i {
+    background-position: 4px -258px;
+}
+
+.local-nav li span {
+    font-size: 12px;
+    color: #222;
+    padding: 5px 0;
+}
+
+/* 特卖汇 */
+
+.sales-box,
+.hot-box {
+    height: 262px;
+    padding: 0 8px 8px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    margin-top: 8px;
+    /* -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+   box-shadow: 0px 1px 2px rgba(0, 0, 0, .3); */
+}
+
+.title {
+    height: 45px;
+    line-height: 45px;
+    /* background-color: pink; */
+    padding: 0 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.title h2 {
+    height: 0;
+    overflow: hidden;
+}
+
+.title h2::after {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    height: 15px;
+    width: 79px;
+    /* background-color: purple; */
+    background: url(../img/img-index/un_home_text.png) no-repeat 0 0;
+    -webkit-background-size: 79px auto;
+    background-size: 79px auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "";
+}
+
+.title-huodong h2::after {
+    height: 18px;
+    background-position: 0 -19px;
+}
+
+.title a {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 60px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    /* border: 1px solid #ff5271; */
+    border-radius: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 12px;
+    background-color: #ff5271;
+    cursor: auto;
+}
+
+.title a::after {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    content: "";
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.sales-content {
+    height: 207px;
+    /* background-color: pink; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.sales-content div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #f9f9f9;
+}
+
+.sales-img {
+    position: relative;
+    overflow: hidden
+}
+
+.sales-img img {
+    height: 117px;
+    width: 100%;
+    line-height: 117px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 320px) {
+    .sales-img {
+        height: 100px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .sales-img {
+        height: 117px;
+    }
+}
+
+@media (min-width: 376px) {
+    .sales-img {
+        height: 117px;
+    }
+}
+
+.sales-content-l p {
+    height: 52px;
+    line-height: 20px;
+    white-space: normal;
+    text-overflow: -o-ellipsis-lastline;
+    /* 这个只适用 Opera*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 需要和 overflow: hidden; 搭配使用*/
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* 设置或检索伸缩盒对象的子元素的排列方式 vertical 垂直 | horizontal 水平*/
+    padding: 8px;
+    font-size: 12px;
+}
+
+.sales-content-l b {
+    color: #fd3a51;
+    font-size: 16px;
+    padding: 0 8px;
+}
+
+.sales-content-l b dfn {
+    font-size: 10px;
+}
+
+.sales-content-l b i {
+    font-size: 14px;
+}
+
+.sales-content-l span {
+    display: inline-block;
+    width: 44px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    background-color: #fd3a51;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.sale-content-r {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.sale-content-r div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #f6f6f6;
+    /* background-color: pink; */
+}
+
+.sale-content-r .sales-list-t {
+    -webkit-box-flex: 0.7;
+    -ms-flex: 0.7;
+    flex: 0.7;
+    position: relative;
+    /* margin-bottom: 5px; */
+    border-bottom: 5px solid #fff;
+}
+
+.sales-item-title {
+    padding: 8px;
+}
+
+.sales-item-title dt {
+    color: #fd3a51;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sales-item-title dd {
+    color: #444444;
+    font-size: 12px;
+}
+
+.sales-list-t a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 62px;
+    height: 82px;
+    /* background-color: purple; */
+    background: url(../img/img-index/pic-tmh-02.png) no-repeat;
+    background-size: 100% auto;
+    content: "";
+}
+
+.sales-list-b {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.sales-list-b div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    /* background-color: purple; */
+    position: relative;
+}
+
+.sales-list-b div a {
+    cursor: auto;
+}
+
+.sales-list-b .b-l img,
+.sales-list-b .b-r img {
+    width: 50px;
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.sales-list-b .b-l dl,
+.sales-list-b .b-r dl {
+    padding: 8px;
+    text-align: center;
+}
+
+.sales-list-b .b-l dt,
+.sales-list-b .b-r dt {
+    color: #6aabff;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.sales-list-b .b-r dt {
+    color: #b3ce72;
+}
+
+.sales-list-b .b-l dd,
+.sales-list-b .b-r dd {
+    font-size: 12px;
+    color: #444444;
+}
+
+.sales-list-b .b-l span {
+    color: #6aabff;
+}
+
+.sales-list-b .b-r span {
+    color: #b3ce72;
+}
+
+.sales-list-b .b-r {
+    border-left: 4px solid #fff;
+}
+
+/* 热门活动 */
+
+.hot-box {
+    height: 468px;
+    background-color: #f2f2f2;
+    padding: 0;
+}
+
+.title-huodong {
+    padding: 0 8px;
+}
+
+.title-huodong i {
+    position: absolute;
+    top: 50%;
+    left: 87px;
+    width: 40px;
+    height: 15px;
+    background: url(../img/img-index/icon-gg@2x.png) no-repeat;
+    background-size: 100% auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.title-huodong a {
+    width: 102px;
+}
+
+.activity {
+    height: 413px;
+}
+
+.activity .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: stretch;
+}
+
+.activity .row .col-50 {
+    -webkit-box-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    /* display: block; */
+    /* width: 100%; */
+    /* -webkit-box-sizing: border-box;
+    box-sizing: border-box; */
+}
+
+.activity .row .col-50 img {
+    height: 100%;
+    width: 100%;
+}
+
+/* footer 页脚 */
+
+.tool-cn {
+    height: 50px;
+    margin-top: 25px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.tool-cn .row {
+    align-items: center;
+}
+
+.tool-cn .col-33 {
+    /* background-color: #fff; */
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.tool-cn .col-33::before {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 17px;
+    height: 17px;
+    background: url(../img/img-index/un_ico_home_v620.png) no-repeat -60px -153px;
+    background-size: 104px auto;
+    content: "";
+    transform: translateX(-50%);
+}
+
+.tool-cn .col-33:nth-child(2)::before {
+    background-position: -60px -172px;
+}
+
+.tool-cn .col-33:nth-child(3)::before {
+    background-position: -60px -310px;
+}
+
+.tool-cn .col-33 a {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #222;
+    cursor: pointer;
+}
+
+.tool-ver {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.tool-ver a {
+    color: #222;
+}
+
+.tool-ver .icon-global {
+    display: inline-block;
+    width: 15px;
+    height: 23px;
+    line-height: 23px;
+    background: url(../img/img-index/un_icon_sites.png) no-repeat 0 -160px;
+    background-size: 30px auto;
+    position: relative;
+    top: 13px;
+    left: 2px;
+    text-align: center;
+}
+
+.tool-ver .triangle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #222;
+    border-bottom: 1px solid #222;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+    top: -2px;
+}
+
+footer p {
+    height: 28px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+footer p label,
+footer p a {
+    height: 18px;
+    font-size: 12px;
+    color: #999;
+}
